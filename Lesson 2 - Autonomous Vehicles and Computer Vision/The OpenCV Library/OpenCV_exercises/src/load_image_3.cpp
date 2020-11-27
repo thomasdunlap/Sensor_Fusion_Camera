@@ -4,6 +4,7 @@
 #include <string>
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -31,7 +32,9 @@ void loadImage3()
     {
 
         // STUDENT TASK : Prevent image 7 from being displayed
-
+        if (it == imgList.begin() + 2) {
+	    continue;
+	}
         // display image
         cv::imshow(windowName, *it);
         cv::waitKey(0); // wait for keyboard input before continuing
